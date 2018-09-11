@@ -5,8 +5,8 @@
 --- In a pair programming session, this Spoon switches between each pair's
 --- settings on the press of a button. Two buttons are connected to a Teensy
 --- (or Arduino) which sends a MIDI SysEx message via USB when a button was
---- presded. This Spoon applies whatever settings are associated with the button
---- that was pressed, e.g. switching the keyboard layout.
+--- pressed. This Spoon applies whatever settings are associated with the button
+--- that was pressed, e.g. switching the keyboard layout between German and US.
 ---
 --- Installation:
 --- 1. [Download the latest ZIP](https://github.com/suhlig/PairingButtons.spoon/releases)
