@@ -1,0 +1,41 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "Runs Hammerspoon code on pressing a physical button",
+    "Constructor" : [
+
+    ],
+    "doc" : "Runs Hammerspoon code on pressing a physical button\n\nIn a pair programming session, this Spoon switches between each pair's\nsettings on the press of a button. Two buttons are connected to a Teensy\n(or Arduino) which sends a MIDI SysEx message via USB when a button was\npresded. This Spoon applies whatever settings are associated with the button\nthat was pressed, e.g. switching the keyboard layout.\n\nInstallation:\n1. [Download the latest ZIP](https:\/\/github.com\/suhlig\/PairingButtons.spoon\/releases)\n2. Unzip it to `~\/.hammerspoon\/Spoons\/PairingButtons.spoon`\n3. Load it in `~\/.hammerspoon\/.init.lua` with `hs.loadSpoon(\"PairingButtons\")`",
+    "items" : [
+
+    ],
+    "Command" : [
+
+    ],
+    "Method" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "name" : "PairingButtons"
+  }
+]
