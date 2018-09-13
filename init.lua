@@ -32,14 +32,13 @@ end
 local DEFAULT_DRIVER = "Steffen"
 
 function onMidiMessage(object, deviceName, commandType, description, metadata)
+
   if metadata.manufacturerID == 0x42 then
-    driver = getSetting("driver", nil)
+    driver = getSetting("driver", DEFAULT_DRIVER)
 
     -- TODO Keep a table that maps key code to driver name
     if metadata.sysexData == "07" then
-      if driver == nil then
-        driver = DEFAULT_DRIVER
-      elseif driver == "Steffen" then
+      if driver == "Steffen" then
         hs.alert(driver .. " is still the driver")
       else
         driver = setSetting("driver", "Steffen")
@@ -49,9 +48,7 @@ function onMidiMessage(object, deviceName, commandType, description, metadata)
         hs.keycodes.setLayout("German")
       end
     elseif metadata.sysexData == "08" then
-      if driver == nil then
-        driver = DEFAULT_DRIVER
-      elseif driver == "Julz" then
+      if driver == "Julz" then
         hs.alert(driver .. " is still the driver")
       else
         driver = setSetting("driver", "Julz")
