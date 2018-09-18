@@ -8,13 +8,9 @@ This Spoon applies whatever settings are associated with the button that was pre
 
 # Installation
 
-1. [Download the latest ZIP](https://github.com/suhlig/PairingButtons.spoon/releases)
+1. [Download the latest ZIP](https://github.com/suhlig/PairingButtons.spoon/archive/master.zip)
 2. Unzip it to `~/.hammerspoon/Spoons/PairingButtons.spoon`
-3. Load it in `~/.hammerspoon/.init.lua` with `hs.loadSpoon("PairingButtons")`
-5. Connect a button between pins 7 and ground and another between pin 8 and ground.
+3. Load it in `~/.hammerspoon/init.lua` with `hs.loadSpoon("PairingButtons")`
+5. On the Teensy, connect a button between pins 7 and ground and another between pin 8 and ground.
 4. Open the `PairingButtons.ino` file with the [Teensyduino IDE](https://www.pjrc.com/teensy/teensyduino.html) and upload it to the Teensy (or Arduino). Make sure you have the [USB mode set to MIDI](https://www.pjrc.com/teensy/td_midi.html).
 6. While still connected by USB, the Teensy now behaves like a MIDI device and will send a SysEx message for each button pressed, which triggers the Spoon.
-
-# TODO
-
-* Release the ZIP using `git release` (really `hub-release`)
