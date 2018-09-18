@@ -9,12 +9,14 @@ const byte MANUFACTURER_ID = 0x42;
 // it makes detecting changes very simple.
 Bounce button7 = Bounce(7, 5);
 Bounce button8 = Bounce(8, 5);
-int led = 13;
+int ledLeft = 14;
+int ledRight = 15;
 
 void setup() {
   pinMode(7, INPUT_PULLUP);
   pinMode(8, INPUT_PULLUP);
-  pinMode(led, OUTPUT);
+  pinMode(ledLeft, OUTPUT);
+  pinMode(ledRight, OUTPUT);
 }
 
 void loop() {
@@ -25,17 +27,21 @@ void loop() {
   button8.update();
 
   if (button7.fallingEdge()) {
-    blink(50);
     // see https://stackoverflow.com/a/15720219/3212907 and
     // https://cnx.org/contents/csA1TDZU@3/MIDI-Messages#id-758884344759
     byte data[] = { SYSEX_BEGIN, MANUFACTURER_ID, 0x07, SYSEX_END };
     usbMIDI.sendSysEx(sizeof(data), data, true);
+
+    digitalWrite(ledLeft, HIGH);
+    digitalWrite(ledRight, LOW);
   }
 
   if (button8.fallingEdge()) {
-    blink(50);
     byte data[] = { SYSEX_BEGIN, MANUFACTURER_ID, 0x08, SYSEX_END };
     usbMIDI.sendSysEx(sizeof(data), data, true);
+
+    digitalWrite(ledLeft, LOW);
+    digitalWrite(ledRight, HIGH);
   }
 
   if (button7.risingEdge()) {
@@ -46,10 +52,4 @@ void loop() {
   while (usbMIDI.read()) {
     // ignore incoming messages
   }
-}
-
-void blink(uint pause) {
-  digitalWrite(led, HIGH);
-  delay(pause);
-  digitalWrite(led, LOW);
 }
