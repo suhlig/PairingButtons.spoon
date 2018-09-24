@@ -32,7 +32,6 @@ end
 local DEFAULT_DRIVER = "Steffen"
 
 function onMidiMessage(object, deviceName, commandType, description, metadata)
-
   if metadata.manufacturerID == 0x42 then
     driver = getSetting("driver", DEFAULT_DRIVER)
 

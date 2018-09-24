@@ -1,0 +1,10 @@
+language: generic
+addons:
+  apt:
+    packages:
+    - luarocks
+    update: true
+script:
+- busted .
+before_install:
+  - luarocks install busted
