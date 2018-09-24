@@ -5,7 +5,6 @@ addons:
       - luarocks
     update: true
 script:
-  - eval $(luarocks path --bin)
-  - busted .
+  - $HOME/.luarocks/bin/busted .
 before_install:
   - luarocks install --local busted
