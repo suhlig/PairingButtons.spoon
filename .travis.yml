@@ -5,6 +5,6 @@ addons:
     - luarocks
     update: true
 script:
-- busted .
+- $HOME/.luarocks/bin/busted .
 before_install:
   - luarocks install --local busted
