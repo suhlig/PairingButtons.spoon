@@ -7,4 +7,4 @@ addons:
 script:
 - busted .
 before_install:
-  - luarocks install busted
+  - luarocks install --local busted
