@@ -2,9 +2,10 @@ language: generic
 addons:
   apt:
     packages:
-    - luarocks
+      - luarocks
     update: true
 script:
-- $HOME/.luarocks/bin/busted .
+  - busted .
 before_install:
+  - eval $(luarocks path --bin)
   - luarocks install --local busted
