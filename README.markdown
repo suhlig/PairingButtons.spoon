@@ -6,7 +6,29 @@ Runs [Hammerspoon](http://www.hammerspoon.org/) code on pressing a physical butt
 
 In a pair programming session, this [Spoon](http://www.hammerspoon.org/Spoons) switches between each pair's settings on the press of a button. Two buttons are connected to a [Teensy](https://www.pjrc.com/teensy) (or Arduino) which sends a MIDI SysEx message via USB when a button was pressed.
 
+  ![Detail view of pairing buttons](detail.jpg)
+
 This Spoon applies whatever settings are associated with the button that was pressed, e.g. switching the keyboard layout between German and US.
+
+# Example
+
+This pairing station consists of
+
+- two (mirrored) screens,
+- two keyboards (one built-in to the laptop, one via external USB), and
+- two pointing devices (trackpad of the laptop, and an external USB mouse).
+
+  ![](pairing-station.jpg)
+
+In this setting, the pairing buttons should be placed between the two engineers, so that both can easily reach their designated button.
+
+Both engineers have equal opportunity to be driver or navigator. All it takes to signal that one wants to drive is to press a button:
+
+  ![A person presses the button to signal that she becomes the driver](in-action.jpg)
+
+The act of reaching for and pressing the button, the sound it makes (it's a mechanical button, after all), and the LED of the button lighting up is a clear sign that this person has taken over the driver's responsibility. Hence, the other engineer becomes the navigator.
+
+Swapping again is equally simple - the current navigator presses the button, has her preferences applied, and assumes the driver role.
 
 # Installation
 
