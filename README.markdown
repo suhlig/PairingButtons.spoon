@@ -1,6 +1,6 @@
 # PairingButtons
 
-[![Build Status](https://travis-ci.org/suhlig/PairingButtons.spoon.svg?branch=master)](https://travis-ci.org/suhlig/PairingButtons.spoon)
+[![Build Status](https://app.travis-ci.com/suhlig/PairingButtons.spoon.svg?branch=master)](https://app.travis-ci.com/suhlig/PairingButtons.spoon)
 
 In a pair programming session, this [Spoon](http://www.hammerspoon.org/Spoons) switches between each engineer's settings on the press of a button. It runs [Hammerspoon](http://www.hammerspoon.org/) code on pressing one of the physical buttons and applies the current driver's preferences to the workstation shared between the two engineers, e.g. switching the keyboard layout between German and US.
 
